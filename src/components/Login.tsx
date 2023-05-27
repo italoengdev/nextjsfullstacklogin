@@ -16,7 +16,12 @@ const Login = () => {
       console.log('User logged in:', user);
       navigateToUserInfo();
     } catch (error: any) {
-      console.error('Login error:', error.message);
+      
+      if (error.code === 'auth/user-not-found') {
+        alert('User does not exist. Please check your email and password.');
+      } else {
+        console.error('Login error:', error.message);
+      }
     }
   };
 
