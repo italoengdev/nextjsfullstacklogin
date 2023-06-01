@@ -1,6 +1,7 @@
 import { useState,useEffect } from 'react';
 import { auth, createUserWithEmailAndPassword, sendEmailVerification } from '../../firebase';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 const Register = () => {
   const [email, setEmail] = useState('');
@@ -114,6 +115,12 @@ const Register = () => {
         >
           Register
         </button>
+        <div className="flex ">
+          <Link className="text-blue-500 underline" href="/">
+          Back to Login
+          </Link>
+        </div>
+
       </div>
     </div>
   );

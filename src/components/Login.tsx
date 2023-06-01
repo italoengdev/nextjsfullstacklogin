@@ -21,6 +21,7 @@ const Login = () => {
         alert('User does not exist. Please check your email and password.');
       } else {
         console.error('Login error:', error.message);
+        alert('User or Password Incorrect. Please try again.');
       }
     }
   };
@@ -37,6 +38,7 @@ const Login = () => {
       navigateToUserInfo();
     } catch (error: any) {
       console.error('Google login error:', error.message);
+      
     }
   };
 
